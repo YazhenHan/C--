@@ -32,4 +32,6 @@ int main() {
             std::cout << std::endl;
         }
     }
+    std::cout << "Test" << std::endl;
+    return 0;
 }
