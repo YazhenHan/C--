@@ -1,2 +1,2 @@
 # C++
- Practice C++ by Using Algorithms and Introduction to Algorithms and C++ Primer.
+ Practice programming by using Algorithms and Introduction to Algorithms and Leetcode and C++ Primer.

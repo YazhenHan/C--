@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/media/yazhenhan/5E2ECE1C2ECDECD9/Users/yazhe/Documents/ComputerGraphics/C--/main.cpp
+iostream
+-
+
