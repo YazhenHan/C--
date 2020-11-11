@@ -28,13 +28,13 @@ The CXX compiler identification is GNU, found in "/media/yazhenhan/5E2ECE1C2ECDE
 Determining if the C compiler works passed with the following output:
 Change Dir: /media/yazhenhan/5E2ECE1C2ECDECD9/Users/yazhe/Documents/ComputerGraphics/C++/C--/CMake/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_04a24/fast && /usr/bin/make -f CMakeFiles/cmTC_04a24.dir/build.make CMakeFiles/cmTC_04a24.dir/build
+Run Build Command(s):/usr/bin/make cmTC_af58b/fast && /usr/bin/make -f CMakeFiles/cmTC_af58b.dir/build.make CMakeFiles/cmTC_af58b.dir/build
 make[1]: Entering directory '/media/yazhenhan/5E2ECE1C2ECDECD9/Users/yazhe/Documents/ComputerGraphics/C++/C--/CMake/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_04a24.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_04a24.dir/testCCompiler.c.o   -c /media/yazhenhan/5E2ECE1C2ECDECD9/Users/yazhe/Documents/ComputerGraphics/C++/C--/CMake/build/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_04a24
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_04a24.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_04a24.dir/testCCompiler.c.o  -o cmTC_04a24 
+Building C object CMakeFiles/cmTC_af58b.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_af58b.dir/testCCompiler.c.o   -c /media/yazhenhan/5E2ECE1C2ECDECD9/Users/yazhe/Documents/ComputerGraphics/C++/C--/CMake/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_af58b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af58b.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_af58b.dir/testCCompiler.c.o  -o cmTC_af58b 
 make[1]: Leaving directory '/media/yazhenhan/5E2ECE1C2ECDECD9/Users/yazhe/Documents/ComputerGraphics/C++/C--/CMake/build/CMakeFiles/CMakeTmp'
 
 
@@ -42,13 +42,13 @@ make[1]: Leaving directory '/media/yazhenhan/5E2ECE1C2ECDECD9/Users/yazhe/Docume
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /media/yazhenhan/5E2ECE1C2ECDECD9/Users/yazhe/Documents/ComputerGraphics/C++/C--/CMake/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_e54ee/fast && /usr/bin/make -f CMakeFiles/cmTC_e54ee.dir/build.make CMakeFiles/cmTC_e54ee.dir/build
+Run Build Command(s):/usr/bin/make cmTC_bc17b/fast && /usr/bin/make -f CMakeFiles/cmTC_bc17b.dir/build.make CMakeFiles/cmTC_bc17b.dir/build
 make[1]: Entering directory '/media/yazhenhan/5E2ECE1C2ECDECD9/Users/yazhe/Documents/ComputerGraphics/C++/C--/CMake/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_e54ee.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_e54ee.dir/testCXXCompiler.cxx.o -c /media/yazhenhan/5E2ECE1C2ECDECD9/Users/yazhe/Documents/ComputerGraphics/C++/C--/CMake/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_e54ee
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e54ee.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_e54ee.dir/testCXXCompiler.cxx.o  -o cmTC_e54ee 
+Building CXX object CMakeFiles/cmTC_bc17b.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_bc17b.dir/testCXXCompiler.cxx.o -c /media/yazhenhan/5E2ECE1C2ECDECD9/Users/yazhe/Documents/ComputerGraphics/C++/C--/CMake/build/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_bc17b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc17b.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_bc17b.dir/testCXXCompiler.cxx.o  -o cmTC_bc17b 
 make[1]: Leaving directory '/media/yazhenhan/5E2ECE1C2ECDECD9/Users/yazhe/Documents/ComputerGraphics/C++/C--/CMake/build/CMakeFiles/CMakeTmp'
 
 
