@@ -44,5 +44,8 @@ int main() {
     {
         cout << sol.findComplement(num) << endl;
     }
+
+    Solution* sol2 = new Solution();
+
     return 0;
 }
