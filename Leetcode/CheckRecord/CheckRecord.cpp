@@ -12,17 +12,19 @@ public:
             if (c == 'A')
             {
                 ++aflag;
+                if(aflag > 1) {
+                    return false;
+                }
                 lflag = 0;
             } else if (c == 'L')
             {
                 ++lflag;
+                if(lflag > 2) {
+                    return false;
+                }
             } else {
                 lflag = 0;
             }
-        }
-        if (aflag > 1 || lflag > 2)
-        {
-            return false;
         }
         return true;
     }
