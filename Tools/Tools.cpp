@@ -1,8 +1,13 @@
-#include"Tools.h"
+#include "Tools.h"
+#include <cmath>
 
-void coutVector(std::vector<int> v) {
-    for(auto vv : v) {
-        std::cout << vv << " ";
+double sqrtNew(double c)
+{
+    double err = 1e-15;
+    double t = c;
+    while (std::abs(t - c / t) > err * t)
+    {
+        t = (c / t + t) / 2.0;
     }
-    std::cout << std::endl;
+    return t;
 }

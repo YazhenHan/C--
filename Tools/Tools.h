@@ -1,4 +1,1 @@
-#include<iostream>
-#include<vector>
-
-void coutVector(std::vector<int>);
+double sqrtNew(double);
