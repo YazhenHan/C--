@@ -34,10 +34,6 @@ public:
             {
                 max3 = num;
             }
-            
-            
-            
-            
         }
         return max3 * max2 * max > max3 * min * min2 ? max3 * max2 * max : max3 * min * min2;
     }

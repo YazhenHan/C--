@@ -3,7 +3,14 @@
         "*.tcc": "cpp",
         "iostream": "cpp",
         "algorithm": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "bit": "cpp",
+        "functional": "cpp",
+        "string_view": "cpp",
+        "random": "cpp",
+        "istream": "cpp",
+        "limits": "cpp",
+        "numeric": "cpp"
     },
     "cmake.configureOnOpen": false
 }
