@@ -1,1 +1,0 @@
-double sqrtNew(double);
