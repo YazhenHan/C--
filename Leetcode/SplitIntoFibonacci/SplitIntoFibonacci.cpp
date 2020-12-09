@@ -77,11 +77,11 @@ private:
             {
                 int i2 = res[res.size() - 1];
                 int i1 = res[res.size() - 2];
-                if (i1 + i2 < i3)
+                if (i1 < i3 - i2)
                 {
                     return false;
                 }
-                else if (i1 + i2 == i3)
+                else if (i1 == i3 - i2)
                 {
                     res.push_back(i3);
                     if (i == S.size())
