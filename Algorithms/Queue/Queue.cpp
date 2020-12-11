@@ -23,12 +23,12 @@ public:
 
 int main()
 {
-    queue q = new queue(6);
+    queue<int>* q = new queue<int>(6);
     for (int i = 0; i < 10; i++)
     {
         q->push(i);
     }
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 6; i++)
     {
         std::cout << q->pop() << " ";
     }
