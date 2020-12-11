@@ -1,20 +1,21 @@
 #include <iostream>
 
+template <typename T>
 struct queue {
 private:
-    int* q;    
+    T* q;    
     int len;
     int front;
     int rear;
 public:
-    queue(int x) : len(x), front(0), rear(0) {
-        q = (int*)malloc(x * sizeof(int));
+    queue(T x) : len(x), front(0), rear(0) {
+        q = (T*)malloc(x * sizeof(T));
     }
-    void push(int x) {
+    void push(T x) {
         q[rear] = x;
         rear = (rear + 1) % len;
     }
-    int pop() {
+    T pop() {
         front = (front + 1) % len;
         return q[(front - 1 + len) % len];
     }
@@ -22,7 +23,7 @@ public:
 
 int main()
 {
-    queue* q = new queue(5);
+    queue q = new queue(6);
     for (int i = 0; i < 10; i++)
     {
         q->push(i);
