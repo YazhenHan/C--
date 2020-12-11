@@ -3,23 +3,29 @@
 template <typename T>
 struct Node {
     T val;
-    Node<T> next;
-    Node(T x) : val(x), next(nullptr) {}
+    Node* next;
+    // Node(T x) : val(x), next(nullptr) {}
 };
 
 int main() {
     int temp;
     std::cin >> temp;
-    Node node = new Node(temp);
+    Node<int>* head = new Node<int>();
+    head->val = temp;
+    head->next = nullptr;
+    Node<int>* head2 = head;
     while (std::cin >> temp)
     {
-        Node tempNode = new Node(temp);
-        node.next = tempNode;
-        node = node.next;
+        Node<int>* tempNode = new Node<int>();
+        tempNode->val = temp;
+        tempNode->next = nullptr;
+        head2->next = tempNode;
+        head2 = head2->next;
     }
-    while ((&node) != nullptr)
+    while (head != nullptr) 
     {
-        std::cout << node.val << " ";
+        std::cout << head->val << " ";
+        head = head->next;
     }
     std::cout << std::endl;
     return 0;
