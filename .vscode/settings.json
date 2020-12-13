@@ -46,6 +46,7 @@
         "xlocnum": "cpp",
         "xstddef": "cpp",
         "xtr1common": "cpp",
-        "unordered_set": "cpp"
+        "unordered_set": "cpp",
+        "xhash": "cpp"
     }
 }
