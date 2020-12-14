@@ -11,7 +11,6 @@ private:
 public:
     void MergeUB(std::vector<int>& a);
     void MergeBU(std::vector<int>& a);
-    ~MergeSort();
 };
 
 void MergeSort::MergeBU(std::vector<int>& a)
@@ -53,10 +52,6 @@ void MergeSort::merge(std::vector<int>& a, int lo, int mid, int hi)
             a[k] = aux[j++];
         else
             a[k] = aux[i++];
-}
-
-MergeSort::~MergeSort()
-{
 }
 
 int main()
