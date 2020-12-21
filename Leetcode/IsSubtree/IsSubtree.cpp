@@ -10,40 +10,26 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-class Solution
-{
+class Solution {
 public:
-    bool isSubtree(TreeNode *s, TreeNode *t, TreeNode *th) {
-        if (s == nullptr && t == nullptr)
-        {
+    bool check(TreeNode *o, TreeNode *t) {
+        if (!o && !t) {
             return true;
         }
-        if (s == nullptr && t != nullptr)
-        {
+        if ((o && !t) || (!o && t) || (o->val != t->val)) {
             return false;
         }
-        if (t == nullptr && s != nullptr)
-        {
-            return false;
-        }
-        if (s->val != t->val)
-        {
-            return isSubtree(s->left, t) || isSubtree(s->right, t);
-        }
-        else
-        {
-            return (isSubtree(s->left, t->left) && isSubtree(s->right, t->right))
-            || isSubtree(s->left, th, th) || isSubtree(s->right, th, th);
-        }
+        return check(o->left, t->left) && check(o->right, t->right);
     }
 
-    bool isSubtree(TreeNode *s, TreeNode *t)
-    {
-        return isSubtree(s, t, t);
+    bool dfs(TreeNode *o, TreeNode *t) {
+        if (!o) {
+            return false;
+        }
+        return check(o, t) || dfs(o->left, t) || dfs(o->right, t);
+    }
+
+    bool isSubtree(TreeNode *s, TreeNode *t) {
+        return dfs(s, t);
     }
 };
-
-int main()
-{
-    return 0;
-}
