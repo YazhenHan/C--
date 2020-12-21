@@ -15,6 +15,7 @@ public:
         cost.push_back(0);
         return minCostClimbingStairs(cost, cost.size() - 1);
 
+        // 动态规划
         vector<int> dp(cost.size() + 1);
         dp[0] = dp[1] = 0;
         for (int i = 2; i <= cost.size(); i++)
