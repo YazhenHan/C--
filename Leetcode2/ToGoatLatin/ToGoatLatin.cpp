@@ -33,7 +33,7 @@ public:
                 ans.append("ma");
                 for (int i = 0; i < count; i++)
                     ans.push_back('a');
-                if (right == S.size() - 1)
+                if (right != S.size() - 1)
                 {
                     ans.push_back(' ');
                 }
