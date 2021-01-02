@@ -38,9 +38,7 @@ public:
             head = head->next;
         }
         if (res == nullptr)
-        {
             return ress;
-        }
         
         head1->next = ress;
         return res;
