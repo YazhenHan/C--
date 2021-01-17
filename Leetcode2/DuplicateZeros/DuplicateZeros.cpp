@@ -18,9 +18,9 @@ public:
             {
                 count--;
                 if (i + count < arr.size())
-            {
-                arr[i + count] = arr[i];
-            }
+                {
+                    arr[i + count] = arr[i];
+                }
             }
         }
     }
