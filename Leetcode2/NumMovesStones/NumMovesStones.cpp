@@ -9,12 +9,11 @@ public:
         int left = min(min(a, b), c);
         int middle = a + b + c - right - left;
         int ma = right - left - 2;
+        int mi;
         if (middle - left == 2 || right - middle == 2)
-        {
             mi = 1;
-        }
-        
-        int mi = min(ma, min(middle - left, min(right - middle, 2)));
+        else
+            mi = min(ma, min(middle - left, min(right - middle, 2)));
         vector<int> ans = {mi, ma};
         return ans;
     }
