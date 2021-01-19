@@ -71,17 +71,12 @@ public:
                 }
                 if (us.find(temp) != us.end())
                 {
-                    if (temp == ans.back() && j != 0)
-                    {
-                        break;
-                    }
                     continue;
                 }
                 ans.push_back(temp);
                 us.insert(temp);
             }
         }
-        sort(ans.begin(), ans.end());
         return ans;
     }
 };
