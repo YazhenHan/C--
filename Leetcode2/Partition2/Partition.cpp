@@ -5,31 +5,39 @@ using namespace std;
 
 class Solution {
 private:
-    bool isA(string s, int i, int j) {
-        while (i < j)
-        {
-            if (s[i] != s[j])
-                return false;
-            i++;
-            j--;
-        }
-        return true;
-    }
-    vector<string> forAns;
+    vector<vector<int>> f;
+    vector<vector<string>> ret;
+    vector<string> ans;
+    int n;
 public:
-    vector<vector<string>> partition(string s) {
-        for (size_t i = 0; i < s.size(); i++)
+    void dfs(const string& s, int i) {
+        if (i == n) {
+            ret.push_back(ans);
+            return;
+        }
+        for (size_t j = i; j < n; j++)
         {
-            for (size_t j = 0; j < s.size(); j++)
-            {
-                if (isA(s, i, j))
-                {
-                    forAns.push_back(s.substr(i, j - i + 1));
-                }
-                
+            if (f[i][j]) {
+                ans.push_back(s.substr(i, j - i + 1));
+                dfs(s, j + 1);
+                ans.pop_back();
             }
-            
+        }
+    }
+
+    vector<vector<string>> partition(string s) {
+        n = s.size();
+        f.assign(n, vector<int>(n, true));
+
+        for (size_t i = n - 1; i >= 0; i--)
+        {
+            for (size_t j = i + 1; j < n; j++)
+            {
+                f[i][j] = (s[i] == s[j]) && f[i + 1][j - 1];
+            }
         }
         
+        dfs(s, 0);
+        return ret;
     }
 };
