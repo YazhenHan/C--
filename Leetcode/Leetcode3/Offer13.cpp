@@ -36,4 +36,19 @@ public:
         }
         return ans;
     }
+
+    int movingCount(int m, int n, int k) {
+        int ans = 0;
+        vector<vector<bool>> vis(m, vector<bool>(n, false));
+        vis[0][0] = true;
+        for (int i = 0; i < m; i++) {
+            for (int j = 0; j < n; j++) {
+                if (getS(i) + getS(j) > k) continue;
+                if (i - 1 >= 0) vis[i][j] = vis[i - 1][j] | vis[i][j];
+                if (j - 1 >= 0) vis[i][j] = vis[i][j - 1] | vis[i][j];
+                ans += vis[i][j];
+            }
+        }
+        return ans;
+    }
 };
