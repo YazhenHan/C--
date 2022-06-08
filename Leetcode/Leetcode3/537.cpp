@@ -27,11 +27,8 @@ public:
     string complexNumberMultiply(string num1, string num2) {
         pair<int, int> p1 = getCom(num1);
         pair<int, int> p2 = getCom(num2);
-        cout << p1.first << " " << p1.second << endl;
-        cout << p2.first << " " << p2.second << endl;
         int real = p1.first * p2.first - p1.second * p2.second;
         int vir = p1.first * p2.second + p1.second * p2.first;
-        cout << real << " " << vir << endl;
         string ans;
         ans.append(to_string(real));
         ans.push_back('+');
