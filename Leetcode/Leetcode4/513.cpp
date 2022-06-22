@@ -16,12 +16,11 @@ private:
     int bfs(vector<TreeNode*> v) {
         vector<TreeNode*> vt;
         for (auto i : v) {
-            if (i == nullptr) continue;
-            vt.push_back(i->left);
-            vt.push_back(i->right);
+            if (i->left != nullptr) vt.push_back(i->left);
+            if (i->right != nullptr) vt.push_back(i->right);
         }
         if (vt.empty()) return v.front()->val;
-        bfs(vt);
+        else return bfs(vt);
     }
 public:
     int findBottomLeftValue(TreeNode* root) {
