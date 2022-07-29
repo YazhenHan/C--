@@ -1,4 +1,5 @@
 #include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -16,6 +17,10 @@ private:
             v.pop_back();
         }
     }
+
+    void bfs(const vector<vector<int>>& graph, vector<vector<int>>& ans, vector<int>& v) {
+        int t = v.back();
+    }
 public:
     // dfs
     vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {
@@ -26,6 +31,26 @@ public:
         return ans;
     }
 
+    // bfs
+    vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {
+        vector<vector<int>> ans;
+        queue<vector<int>> q;
+        vector<int> p;
+        p.push_back(0);
+        q.push(p);
+        while (!q.empty()) {
+            auto t = q.front();
+            for (auto g : graph[t.back()]) {
+                vector<int> tp = t;
+                tp.push_back(g);
+                if (g == graph.size() - 1)
+                    ans.push_back(tp);
+                else
+                    q.push(tp);
+            }
+        }
+        return ans;
+    }
     // bfs
     vector<vector<int>> allPathsSourceTarget(vector<vector<int>>& graph) {
         int n = graph.size();
