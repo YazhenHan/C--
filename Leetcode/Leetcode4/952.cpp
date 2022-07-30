@@ -1,5 +1,6 @@
 #include <vector>
 #include <utility>
+#include <algorithm>
 
 using namespace std;
 
@@ -80,11 +81,9 @@ public:
             sz[i] = 1;
         }
         count = N;
-        int ans = 0;
-        for (auto edge : edges) {
+        for (auto edge : edges)
             union2(edge.first, edge.second);
-            ans = max(ans, max(sz[edge.first], sz[edge.second]));
-        }
-        return ans;
+
+        return *max_element(sz.begin(), sz.end());
     }
 };
