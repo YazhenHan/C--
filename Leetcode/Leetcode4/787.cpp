@@ -32,4 +32,15 @@ public:
 
         return distTo[dst] == INT32_MAX ? -1 : distTo[dst];
     }
+
+    int findCheapestPrice(int n, vector<vector<int>>& flights, int src, int dst, int k) {
+        vector<long> distTo(n, INT32_MAX);
+        distTo[src] = 0;
+        for (int i = 0; i <= k; i++) {
+            vector<long> tt = distTo;
+            for (const auto & flight : flights)
+                distTo[flight[1]] = min(distTo[flight[1]], tt[flight[0]] + flight[2]);
+        }
+        return distTo[dst] == INT32_MAX ? -1 : distTo[dst];
+    }
 };
