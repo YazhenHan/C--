@@ -16,6 +16,6 @@ public:
             head = hn;
             hn = temp;
         }
-        return hn;
+        return head;
     }
 };
