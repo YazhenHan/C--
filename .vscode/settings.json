@@ -52,6 +52,10 @@
         "map": "cpp",
         "set": "cpp",
         "unordered_map": "cpp",
-        "fstream": "cpp"
+        "fstream": "cpp",
+        "bit": "cpp",
+        "clocale": "cpp",
+        "ctime": "cpp",
+        "numeric": "cpp"
     }
 }
