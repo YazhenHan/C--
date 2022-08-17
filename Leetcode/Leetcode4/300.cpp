@@ -20,4 +20,16 @@ public:
             ans = max(ans, f(nums, i, dp));
         return ans;
     }
+
+    int lengthOfLIS(vector<int>& nums) {
+        vector<int> f = { nums[0] };
+        for (int i = 1; i < nums.size(); i++) {
+            int num = nums[i];
+            if (num > f.back())
+                f.push_back(num);
+            else
+                *lower_bound(f.begin(), f.end(), num) = num;
+        }
+        return f.size();
+    }
 };
