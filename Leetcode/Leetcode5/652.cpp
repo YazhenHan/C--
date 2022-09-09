@@ -66,6 +66,7 @@ public:
         return serial;
     }
     vector<TreeNode*> findDuplicateSubtrees(TreeNode* root) {
-
+        dfs(root);
+        return {repeat.begin(), repeat.end()};
     }
 };
