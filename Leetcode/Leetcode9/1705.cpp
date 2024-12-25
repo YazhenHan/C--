@@ -7,11 +7,8 @@ using namespace std;
 class Solution {
 public:
     int eatenApples(vector<int>& apples, vector<int>& days) {
-        // auto comp = [](const pair<int, int> & p1, const pair<int, int> & p2) {
-            // return p1.first < p2.first;
-        // };
         priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
-        int ans;
+        int ans = 0;
         for (int i = 0; i < apples.size(); i++) {
             pq.push({i + days[i], apples[i]});
             while (!pq.empty() && pq.top().first <= i) pq.pop();
@@ -26,8 +23,8 @@ public:
         while (!pq.empty()) {
             while (!pq.empty() && pq.top().first <= i) pq.pop();
             if (!pq.empty()) {
-                ans += min(pq.top().first, pq.top().second);
-                i += min(pq.top().first, pq.top().second);
+                ans += min(pq.top().first - i, pq.top().second);
+                i += min(pq.top().first - i, pq.top().second);
                 pq.pop();
             }
         }
